@@ -15,6 +15,7 @@ nft add rule ip nat postrouting masquerade
 if [ $# -gt 0 ]; then
   exec "$@"
 else
+  echo "NFQWS2 $(/opt/zapret2/nfq2/nfqws2 --version)"
   /opt/zapret2/init.d/sysv/zapret2 start
   exec sleep infinity
 fi
